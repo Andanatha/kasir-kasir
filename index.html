@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kasir</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <form id="kasirForm">
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5F_iJkyFXxmNNXUO9NAJcDnSPpNMK4vf52Q&s"
+                    alt="Menu 1" class="menu-image">
+                <h3 class="menu">Hop-burger</h3>
+                <div class="jumlah-container">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu1', -1)">-</button>
+                    <input type="number" id="menu1" value="0" min="0" readonly style="border: none;">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu1', 1)">+</button>
+                </div>
+                <span class="harga">10000</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/u7sfjeez9vqdnnypaskfjm_product_list.jpg" alt="Menu 2" class="menu-image">
+                <h3 class="menu">Yellow Drink</h3>
+                <div class="jumlah-container">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu2', -1)">-</button>
+                    <input type="number" id="menu2" value="0" min="0" readonly style="border: none;">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu2', 1)">+</button>
+                </div>
+                <span class="harga">5000</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2N2YPT_eedfTD2z2U3Qjm9NCn6oI0nvZyQ&s" alt="Menu 2" class="menu-image" alt="Menu 2" class="menu-image">
+                <h3 class="menu">Fries</h3>
+                <div class="jumlah-container">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu3', -1)">-</button>
+                    <input type="number" id="menu3" value="0" min="0" readonly style="border: none;">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu3', 1)">+</button>
+                </div>
+                <span class="harga">15000</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2N2YPT_eedfTD2z2U3Qjm9NCn6oI0nvZyQ&s" alt="Menu 2" class="menu-image">
+                <h3 class="menu">Coffee</h3>
+                <div class="jumlah-container">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu4', -1)">-</button>
+                    <input type="number" id="menu4" value="0" min="0" readonly style="border: none;">
+                    <button type="button" class="jumlah-button" onclick="updateJumlah('menu4', 1)">+</button>
+                </div>
+                <span class="harga">10000</span>
+            </div>
+            <!-- Tambahkan menu lainnya dengan cara yang sama -->
+        </div>
+        
+        
+        <div class="apa">
+            <label for="nama" class="inform">Nama Pembeli:</label>
+            <input type="text" id="nama" required style="text-transform: capitalize;">
+    
+            
+        </div>
+
+        <div class="apa">
+            <label for="uangDiberi" class="inform">Uang Diberi:</label>
+            <input type="number" id="uangDiberi" oninput="formatNumber(this)">
+            <button type="submit" style="border: none; background-color: rgb(106, 235, 235); border-radius: 5px; font-size: 21px; padding: 9px;">Hitung</button>
+        </div>
+
+
+    </form>
+
+
+    <div class="trans">
+        <div id="hasil"></div>
+        <pre id="totalPendapatan"></pre>
+
+    </div>
+
+    <div id="riwayatPembeli">
+        <h2>Riwayat Pembeli</h2>
+        <button id="cekRiwayat">Cek Riwayat</button>
+        <button id="closeRiwayat" style="display: none;">Close</button>
+    </div>
+    
+    
+
+    <script src="index.js"></script>
+</body>
+
+</html>

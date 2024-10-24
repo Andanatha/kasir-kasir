@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: 'Grandstander', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.opening {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.opening h2 {
+    color: #333;
+}
+
+.baten {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.baten:hover {
+    background-color: #218838;
+}
+
+form {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33% - 20px);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-image {
+    width: 200px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.jumlah-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumlah-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.jumlah-button:hover {
+    background-color: #0056b3;
+}
+
+input[type="number"],input[type="text"] {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.apa {
+    font-family: 'Grandstander', sans-serif;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.menu {
+    font-family: 'Grandstander', sans-serif;
+}
+
+#hasil {
+    font-family: 'Grandstander', sans-serif;
+}
+
+.trans {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+span {
+    display: none;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .menu-item {
+        width: calc(50% - 20px); /* Adjust for two items per row */
+    }
+
+    input[type="number"], input[type="text"] {
+        width: 150px;
+        height: 30px; /* Adjust input size for smaller screens */
+    }
+
+    
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+    }
+
+    .menu-item {
+        width: 100%; /* Full width on mobile */
+        margin: 5px 0;
+    }
+
+    input[type="number"], input[type="text"] {
+        width: 80px; /* Smaller input on mobile */
+    }
+
+    .baten {
+        width: 100%; /* Button full width on mobile */
+        padding: 10px 0;
+    }
+
+    .jumlah-container {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+}
